@@ -1,5 +1,5 @@
 #!/bin/bash
-#stl (Wegare)
+#stl (IDTunnel.com)
 printf 'ctrl+c' | crontab -e > /dev/null
 
 cek=$(cat /etc/openwrt_r*)
