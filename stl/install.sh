@@ -1,7 +1,7 @@
 #!/bin/bash
 #stl (Wegare)
 printf 'ctrl+c' | crontab -e > /dev/null
-opkg update && opkg install unzip
+
 cek=$(cat /etc/openwrt_r*)
 if [[ $cek == *"LEDE"* ]] && [[ $cek == *"ar71xx"* ]]; then
 wget --no-check-certificate "https://github.com/wegare123/backup/blob/main/lede/ar71xx.zip?raw=true" -O ~/ekstrak.zip && unzip ~/ekstrak.zip && cp ~/ar71xx/*.ipk ~/ && rm -rf ~/ekstrak.zip && rm -rf ~/ar71xx
@@ -34,7 +34,7 @@ fi
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/stl/main/stl/stl.sh" -O /usr/bin/stl
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/stl/main/stl/gproxy.sh" -O /usr/bin/gproxy
 wget --no-check-certificate "https://raw.githubusercontent.com/wegare123/stl/main/stl/autorekonek-stl.sh" -O /usr/bin/autorekonek-stl
-opkg install openvpn-openssl && opkg install ip-full && opkg install openssh-client && opkg install stunnel && opkg install *.ipk && opkg install lsof && opkg install fping screen
+
 chmod +x /usr/bin/gproxy
 chmod +x /usr/bin/stl
 chmod +x /usr/bin/autorekonek-stl
